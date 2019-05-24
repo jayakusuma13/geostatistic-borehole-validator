@@ -3,7 +3,7 @@
 utilizing the Machine Learning and Data Science techniques to help cleaning up and reformatting raw borehole survey data for further Geostatistic appliance.
 
 Going from this:
-
+```
 BHID	From	To	Thick	Sn (kg/m3)
 01/01/1970	0	2	2	0
 01/01/1970	2	2.5	0.5	0
@@ -23,9 +23,9 @@ BHID	From	To	Thick	Sn (kg/m3)
 01/03/1970	5	6	1	2.1
 01/03/1970	6	6.5	0.5	0
 01/03/1970	6.5	8	1.5	0
-
+```
 Into this:
-
+```
                                    wavg  Thick Sumz  From     To
 BHID                resultz                                     
 1970-01-01 00:00:00 OB         0.000000        2.00  0.00   2.00
@@ -46,3 +46,4 @@ BHID                resultz
                     Kong       0.000000        1.00  6.50   7.50
 1970-06-01 00:00:00 Kaksa     29.946154        6.50  0.00   8.00
                     Miencan    1.250000        1.50  0.50   2.00
+```
