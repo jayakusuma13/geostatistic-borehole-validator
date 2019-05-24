@@ -1,2 +1,48 @@
 # geostatistic-borehole-validator
-help initialize borehole survei data for software input ready
+
+utilizing the Machine Learning and Data Science techniques to help cleaning up and reformatting raw borehole survey data for further Geostatistic appliance.
+
+Going from this:
+
+BHID	From	To	Thick	Sn (kg/m3)
+01/01/1970	0	2	2	0
+01/01/1970	2	2.5	0.5	0
+01/01/1970	2.5	3	0.5	3.35
+01/01/1970	3	5	2	0.05
+01/01/1970	5	5.8	0.8	0
+01/01/1970	5.8	6.5	0.7	0
+01/02/1970	0	2	2	3.3
+01/02/1970	2	2.5	0.5	2.8
+01/02/1970	2.5	3	0.5	0
+01/02/1970	3	4	1	8.3
+01/02/1970	4	5.7	1.7	0
+01/02/1970	5.7	6.3	0.6	0
+01/03/1970	0	2	2	1.7
+01/03/1970	2	3.5	1.5	3.37
+01/03/1970	3.5	5	1.5	1.8
+01/03/1970	5	6	1	2.1
+01/03/1970	6	6.5	0.5	0
+01/03/1970	6.5	8	1.5	0
+
+Into this:
+
+                                   wavg  Thick Sumz  From     To
+BHID                resultz                                     
+1970-01-01 00:00:00 OB         0.000000        2.00  0.00   2.00
+                    Kaksa      0.000000        0.50  2.00   2.50
+                    Miencan    0.710000        2.50  2.50   5.00
+                    Kong       0.000000        1.50  5.00   6.50
+1970-02-01 00:00:00 Kaksa      4.075000        4.00  0.00   4.00
+                    Kong       0.000000        2.30  4.00   6.30
+1970-03-01 00:00:00 Kaksa      1.640000        5.00  0.00   6.50
+                    Miencan    3.370000        1.50  2.00   3.50
+                    Kong       0.000000        1.50  6.50   8.00
+1970-04-01 00:00:00 OB         0.000000        4.00  0.00   8.50
+                    Kaksa     47.860000        4.00  2.00   6.00
+                    Miencan    1.400000        0.50  6.00   6.50
+1970-05-01 00:00:00 OB         0.000000        2.00  0.00   2.00
+                    Kaksa      4.100000        3.50  2.00   6.50
+                    Miencan    0.170000        1.00  2.50   3.50
+                    Kong       0.000000        1.00  6.50   7.50
+1970-06-01 00:00:00 Kaksa     29.946154        6.50  0.00   8.00
+                    Miencan    1.250000        1.50  0.50   2.00
